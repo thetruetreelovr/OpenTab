@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>OpenTab 1.3</title>
+    <link rel="stylesheet" href="system/style.css">
+</head>
+<body>
+
+<div id="desktop"></div>
+
+<div id="start-menu">
+    <div class="start-header">OpenTab Пуск</div>
+    <div class="start-apps" id="start-list"></div>
+    <div style="padding: 10px; border-top: 1px solid #ccc; font-size: 11px; text-align: center; opacity: 0.6;">OpenTab 1.3</div>
+</div>
+
+<div id="taskbar-container">
+    <div id="taskbar">
+        <div class="tb-left">
+            <div id="start-trigger" class="sys-btn" onclick="OS.toggleStart(event)">
+                <img id="start-logo" src="" alt="Start" draggable="false">
+            </div>
+            <div id="home-trigger" class="sys-btn" onclick="console.log('Home Clicked')">
+                <img id="home-logo" src="" alt="Home" draggable="false">
+            </div>
+            <div id="store-trigger" class="sys-btn" onclick="console.log('Store Clicked')">
+                <img id="store-logo" src="" alt="Store" draggable="false">
+            </div>
+            
+            <div id="active-tasks"></div>
+        </div>
+        
+        <div id="clock">00:00</div>
+    </div>
+</div>
+
+<script src="config.js"></script>
+<!--<script src="docs.js"></script>-->
+<script src="system/os.js"></script>
+<!--<script src="system/timemachine.js"></script>-->
+<script src="apps/Explorer/explorer.js"></script>
+<script src="apps/Notepad/notepad.js"></script>
+<script src="apps/Calculator/calc.js"></script>
+<script src="apps/Settings/settings.js"></script>
+<script src="apps/TaskManager/taskmgr.js"></script>
+<script src="apps/Browser/browser.js"></script>
+<script src="apps/%webres/Blockbench/blockbench.js"></script>
+<script src="apps/%webres/Photoshop/photoshop.js"></script>
+<script src="apps/%webres/Minecraftweb/mineweb.js"></script>
+<script src="apps/%webres/Car Simulator/csimulator.js"></script>
+<script src="apps/%webres/Excalidraw/exd.js"></script>
+<script src="apps/%webres/Code editor/cde.js"></script>
+
+<script>
+    window.onload = () => OS.init();
+</script>
+</body>
+</html>
